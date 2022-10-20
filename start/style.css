@@ -5,8 +5,9 @@
     --color2: #C0C0C0;
     --color3: #3A6EA5;
     --color4: #FF6700;
-    --font-dark: #171E27;
+    --font-dark: #1e242d;
     --font-light: #EBEBEB;
+    font-size: 10px
 }
 
 *{
@@ -17,3 +18,111 @@
     font-family: 'Inter';
     font-weight: 700;
 }
+
+body{
+    background-color: #194574;
+}
+
+.center-content {
+    display: flex;  
+    justify-content: center;  
+    align-items: stretch;
+}
+
+/* CALCULATOR STYLE*/
+
+.calculator-container{
+    display: flex;
+    margin: 4rem;
+    padding: 2rem;
+    width: 40rem;
+    height: 60rem;
+    border: solid 1rem var(--font-light);
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem rgba(0, 0, 0, 0.25);
+    background-color: var(--color3);
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-items: center;
+    flex: 1;
+}
+
+.result-container{
+    position: relative;
+    color: var(--font-light);
+    font-size: 24px;
+    margin-bottom: 1.4rem;
+    border: solid 0.3rem var(--font-light);
+    border-radius: 1.5rem;
+    flex: 1;
+}
+
+.result{
+    padding: 1.4rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.buttons-grid{
+    display: grid;
+    margin-inline: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.7rem;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.button {
+    height: 100%;
+    min-height: 6rem;
+    width: 100%;
+    min-width: 6rem;
+    border: solid 0.3rem var(--font-dark);
+    border-radius: 1.5rem;
+    align-self: center;
+    justify-self: center;
+    background-color: var(--color1);
+}
+.button{
+    filter: brightness(100%);
+    box-shadow: .4rem .4rem rgba(0, 0, 0, 0.25);
+    transition: ease-in .07s;
+    transition: filter ease-out 0.5s;
+}
+.button:hover{
+    filter: brightness(115%);
+    transition: ease-out .2s;
+}
+.button:active{
+    transform: scale(95%);
+    box-shadow: 0rem 0rem rgba(0, 0, 0, 0.25);
+    transition: ease-in .05s;
+}
+
+button{
+    flex: 1;
+    background: none;
+    text-decoration: none;
+    border-radius: 1.2rem;
+    font-size: 24px;
+    color: var(--font-dark);
+    cursor: pointer;
+}
+
+.calculate {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background-color: var(--color4);
+}
+
+.add, .subtract, .multiply, .divide {
+    background-color: var(--color2);
+}
+
+
